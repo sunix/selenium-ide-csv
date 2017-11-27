@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://cyclad.galapp.net/" />
+<title>Add new Candidate from CSV</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Add new Candidate from CSV</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>line</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>line &lt;= 126</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file:///home/sutan/github/sunix/candidate.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='dvMenuRamka2']/div/ul/li[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Nouveau candidat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=pan_txtEmail</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>lastname</td>
+	<td>${line},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>firstname</td>
+	<td>${line},2</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>email</td>
+	<td>${line},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>phone</td>
+	<td>${line},4</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>contact</td>
+	<td>${line},5</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>actions</td>
+	<td>${line},6</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>date</td>
+	<td>${line},7</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>status</td>
+	<td>${line},8</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>salaire</td>
+	<td>${line},9</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>interesse</td>
+	<td>${line},10</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>remarques</td>
+	<td>${line},13</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=pan_rblPlec_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pan_rblPlec_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${email}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${lastname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${firstname}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=pan_txtNazwisko</td>
+	<td>${lastname}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pan_txtNazwisko</td>
+	<td>${lastname}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pan_txtNazwisko</td>
+	<td>${lastname}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=pan_txtImie</td>
+	<td>${firstname}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pan_txtImie</td>
+	<td>${firstname}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pan_txtEmail</td>
+	<td>${email}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pan_daneZakladki_txtUwagiKonsultant</td>
+	<td>Tel: ${phone}<br />Contact: ${contact}<br />Actions entretien: ${actions}<br />Date d'action: ${date}<br />Salarié/FL: ${status}<br />Salaire/TJM(euros): ${salaire}<br />Interessé/Pas interessé: ${interesse}<br />Remarques:: ${remarques}<br /></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pan_cmbKraj_ctl06</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=listItem_174</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=listItem_174</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pan_cmbWojewodztwo_ctl06</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=listItem_4892</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=listItem_4892</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3200</td>
+	<td>3200</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pan_cmbWojewodztwo_ctl06</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=listItem_4892</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=listItem_4892</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=pan$ctl03$ctl01</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=oknoAplikacji</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=Tytulc5</td>
+	<td>Ajouter un nouveau candidat</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${line}+1</td>
+	<td>line</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
